@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:fontFamily="sans-serif"
+        android:text="BEST"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/colorswitchs"
+            app:layout_constraintBottom_toTopOf="@+id/circleImageView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/footballImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/footballwhite" />
+
+            <ImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/circle" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/soundButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/custom_button"
+                    android:drawableLeft="@drawable/volume_up"
+                    android:drawablePadding="10dp"
+                    android:onClick="soundSetting"
+                    android:padding="10dp"
+                    android:text="Sound"
+                    android:textAllCaps="false"
+                    android:textColor="#3CA4F0"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/vibrationButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:drawableLeft="@drawable/vibration"
+                    android:drawablePadding="10dp"
+                    android:onClick="vibrateSetting"
+                    android:padding="10dp"
+                    android:text="Vibration"
+                    android:textAllCaps="false"
+                    android:textColor="#3CA4F0"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/custom_button"
+                android:onClick="playGame"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="#3CA4F0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Football Color Switch</string>
+    <string name="menu">Menu</string>
+    <string name="restart">Restart</string>
+    <string name="game_over">Game Over!!!</string>
+    <string name="return_str">Return</string>
+</resources>
